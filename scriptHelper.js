@@ -40,6 +40,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 	let fuelStatus = document.getElementById('fuelStatus');
 	let launchStatus = document.getElementById('launchStatus');
 	let cargoStatus = document.getElementById('cargoStatus');
+	list.style.visibility = 'hidden';
 
 	//--- Empty String Validation ---
 	//--- Use validateInput() to make sure that all fields are filled out
@@ -70,7 +71,6 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 	else {
 		pilotStatus.innerHTML = `Pilot ${pilot} is ready for launch`;
 		copilotStatus.innerHTML = `Co-pilot ${copilot} is ready for launch`;
-		list.style.visibility = 'hidden';
 	}
 
 	if (Number(fuelLevel) < 10000 && Number(cargoLevel) < 10000) {
