@@ -81,6 +81,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 	} else if (Number(cargoLevel) > 10000 && Number(fuelLevel) >= 10000) {
 		list.style.visibility = `visible`;
 		cargoStatus.innerHTML = `Cargo mass too heavy for launch`;
+		fuelStatus.innerHTML = `Fuel level high enough for launch`;
 		launchStatus.innerHTML = `Shuttle Not Ready for Launch`;
 		launchStatus.style.color = `rgb(199, 37, 78)`;
 	} else if (Number(cargoLevel) > 10000 && Number(fuelLevel) < 10000) {
