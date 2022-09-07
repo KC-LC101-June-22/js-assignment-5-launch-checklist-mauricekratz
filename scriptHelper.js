@@ -50,6 +50,7 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 		validateInput(fuelLevel) === `Empty` ||
 		validateInput(cargoLevel) === `Empty`
 	) {
+		list.style.visibility = 'hidden';
 		alert(`Make sure to enter valid information for each field!`);
 	}
 	//--- String Validation ---- Use validateInput() to make sure pilotName & copilotName are stings
