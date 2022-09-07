@@ -2,6 +2,8 @@
 
 window.addEventListener('load', () => {
 	const form = document.querySelector('form');
+	let list = document.getElementById('faultyItems');
+	list.style.visibility = 'hidden';
 	form.addEventListener('submit', (event) => {
 		event.preventDefault();
 		// Storing user input value in an instance of a local variable
@@ -9,12 +11,11 @@ window.addEventListener('load', () => {
 		let copilot = document.querySelector('input[name=copilotName]').value;
 		let fuelLevel = document.querySelector('input[name=fuelLevel]').value;
 		let cargoLevel = document.querySelector('input[name=cargoMass]').value;
-		let list = document.getElementById('faultyItems');
-		list.style.visibility = 'hidden';
+		// let list = document.getElementById('faultyItems');
+		// list.style.visibility = 'hidden';
 
 		// Validate user input with formSubmission function from scriptHelper.js
 		formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
-		list.style.visibility = 'hidden';
 	});
 
 	let listedPlanets;
