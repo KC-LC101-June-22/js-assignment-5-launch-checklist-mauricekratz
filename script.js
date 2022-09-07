@@ -10,6 +10,7 @@ window.addEventListener('load', () => {
 		let fuelLevel = document.querySelector('input[name=fuelLevel]').value;
 		let cargoLevel = document.querySelector('input[name=cargoMass]').value;
 		let list = document.getElementById('faultyItems');
+		list.style.visibility = 'hidden';
 
 		// Validate user input with formSubmission function from scriptHelper.js
 		formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
