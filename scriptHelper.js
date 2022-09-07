@@ -101,10 +101,12 @@ function formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel) {
 }
 
 async function myFetch() {
-    let planetsReturned = await fetch('https://handlers.education.launchcode.org/static/planets.json').then( function(response) {
-        return response.json();
-        });
-    return planetsReturned;
+	let planetsReturned = await fetch(
+		'https://handlers.education.launchcode.org/static/planets.json'
+	).then(function (response) {
+		return response.json();
+	});
+	return planetsReturned;
 }
 
 function pickPlanet(planets) {
