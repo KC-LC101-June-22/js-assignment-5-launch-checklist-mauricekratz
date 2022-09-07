@@ -14,6 +14,7 @@ window.addEventListener('load', () => {
 
 		// Validate user input with formSubmission function from scriptHelper.js
 		formSubmission(document, list, pilot, copilot, fuelLevel, cargoLevel);
+		list.style.visibility = 'hidden';
 	});
 
 	let listedPlanets;
